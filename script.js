@@ -1,10 +1,8 @@
-// Conversion
-const usdToInrRate = 83; // 1 USD = 83 INR
+const usdToInrRate = 83; 
 function convertToINR(usdPrice) {
     return (usdPrice * usdToInrRate).toFixed(0); // round to nearest rupee
 }
 
-// Game Data
 const games = [
     { id: 1, title: "Cyber Odyssey 2077", price: 59.99, image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400", genre: "RPG", rating: 4.5, featured: true },
     { id: 2, title: "Shadow Legends", price: 49.99, image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400", genre: "Action", rating: 4.8, featured: true },
@@ -24,7 +22,6 @@ const games = [
     { id: 16, title: "Haunted Manor", price: 29.99, image: "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=400", genre: "Horror", rating: 4.2, featured: false }
 ];
 
-// State
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 let liked = JSON.parse(localStorage.getItem('liked')) || [];
